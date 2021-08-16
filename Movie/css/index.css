@@ -1,0 +1,579 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.mainsec
+{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: url(../images/bg.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.mainsec header
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 40px 100px;
+}
+.maincontent
+{
+    position: absolute;
+    top: 250px;
+    left: 100px;
+    width: 600px;
+}
+.maincontent .disc h2
+{
+    color: #fff;
+    font-size: 3.2em;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.maincontent .disc h2 span
+{
+    font-weight: 800;
+}
+.maincontent .disc p
+{
+    color: white;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    margin-bottom: 50px;
+    font-family: 'Poppins', sans-serif;
+}
+.maincontent .disc .play
+{
+    position: relative;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 1.2em;
+    font-weight: 800;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+}
+.maincontent .disc .play img
+{
+    max-width: 50px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.sci
+{
+    position: absolute;
+    top: 26%;
+    /* transform: translateY(-40%); */
+    display: flex;
+    right: 50px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.sci li
+{
+    list-style: none;
+    
+}
+.sci li a
+{
+    position: relative;
+    display: inline-block;
+    margin-top: 30px;
+    filter: invert(1);
+    transform: scale(0.8);
+}
+.slide
+{
+    position: absolute;
+    bottom: 50px;
+    left: 45%;
+    width: 300px;
+    height: 200px;
+    background: url(../images/joker.png);
+    background-size: cover;
+    cursor: pointer;
+    animation: animate 20s linear infinite;
+}
+@keyframes animate
+{
+    0%,100%
+    {
+        background-position: top;
+    }
+    45%,50%
+    {
+        background-position: bottom;
+    }
+}
+.trailer
+{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 10000;
+    background-color: rgba(0, 0, 0, 0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    opacity: 0;
+}
+.trailer video
+{
+    max-width: 900px;
+    outline: none;
+}
+.trailer img
+{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    filter: invert(1);
+    transform: scale(0.6);
+    cursor: pointer;
+}
+.trailer.active
+{
+    visibility: visible;
+    opacity: 1;
+}
+@media (max-width : 1000px)
+{
+    .mainsec
+    {
+        position: relative;
+        width: 100%;
+        /* height: 100%; */
+        background: url(../images/bg.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    .mainsec header 
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 20px 50px;
+    }
+    .mainsec header .logo img
+    {
+        width: 120px;
+        height: 60px;
+    }
+    .mainsec header .toggle img
+    {
+        width: 50px;
+    }
+    .maincontent 
+    {
+        position: absolute;
+        top: 160px;
+        left: 60px;
+        width: 600px;
+    }
+    .maincontent .disc h2 
+    {
+        color: #fff;
+        font-size: 2.5em;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+    .maincontent .disc p 
+    {
+        color: white;
+        font-size: 1em;
+        line-height: 1.5em;
+        margin-bottom: 20px;
+        font-family: 'Poppins', sans-serif;
+    }
+    .slide {
+        position: absolute;
+        bottom: 20px;
+        left: 40%;
+        width: 250px;
+        height: 180px;
+        background: url(../images/joker.png);
+        background-size: cover;
+        cursor: pointer;
+        animation: animate 20s linear infinite;
+    }
+    .sci
+    {
+        position: absolute;
+        top: 45%;
+        /* transform: translateY(-40%); */
+        display: flex;
+        right: 50px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .sci li a {
+        position: relative;
+        display: inline-block;
+        margin-top: 20px;
+        filter: invert(1);
+        transform: scale(0.8);
+    }
+    .trailer video
+    {
+        max-width: 760px;
+        outline: none;
+    }
+}
+@media (max-width : 751px)
+{
+    .mainsec header .logo img 
+    {
+        width: 85px;
+        height: 40px;
+    }
+    .mainsec header .toggle img 
+    {
+        width: 40px;
+    }
+    .maincontent .disc h2 
+    {
+        color: #fff;
+        font-size: 2em;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+    .maincontent .disc p 
+    {
+        color: white;
+        font-size: 13px;
+        line-height: 1.5em;
+        margin-bottom: 20px;
+        font-family: 'Poppins', sans-serif;
+    }
+    .maincontent .disc .play 
+    {
+        position: relative;
+        display: inline-flex;
+        justify-content: flex-start;
+        align-items: center;
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 2px;
+        font-size: 1em;
+        font-weight: 800;
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        cursor: pointer;
+    }
+    .maincontent .disc .play img 
+    {
+        max-width: 40px;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+    .slide 
+    {
+        position: absolute;
+        top: 55%;
+        left: 8.5%;
+        width: 250px;
+        height: 180px;
+        background: url(../images/joker.png);
+        background-size: cover;
+        cursor: pointer;
+        animation: animate 20s linear infinite;
+    }
+    .sci 
+    {
+        position: absolute;
+        top: 82%;
+        display: flex;
+        left: 60px;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: row;
+    }
+    .sci li a 
+    {
+        position: relative;
+        display: inline-block;
+        margin-right: 20px;
+        filter: invert(1);
+        transform: scale(0.6);
+    }
+    .trailer video
+    {
+        max-width: 740px;
+        outline: none;
+    }
+}
+@media (max-width : 661px)
+{
+    .maincontent 
+    {
+        position: absolute;
+        top: 105px;
+        left: 50px;
+        width: 400px;
+    }
+    .maincontent .disc h2 
+    {
+        color: #fff;
+        font-size: 1.7em;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+    .maincontent .disc p 
+    {
+        color: white;
+        font-size: 12px;
+        line-height: 1.5em;
+        margin-bottom: 20px;
+        font-family: 'Poppins', sans-serif;
+    }
+    .maincontent .disc .play 
+    {
+        position: relative;
+        display: inline-flex;
+        justify-content: flex-start;
+        align-items: center;
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 2px;
+        font-size: 15px;
+        font-weight: 800;
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        cursor: pointer;
+    }
+    .maincontent .disc .play img 
+    {
+        max-width: 30px;
+        margin-right: 8px;
+        cursor: pointer;
+    }
+    .slide 
+    {
+        position: absolute;
+        top: 47%;
+        left: 8%;
+        width: 250px;
+        height: 180px;
+        background: url(../images/joker.png);
+        background-size: cover;
+        cursor: pointer;
+        animation: animate 20s linear infinite;
+    }
+    .sci 
+    {
+        position: absolute;
+        top: 74%;
+        display: flex;
+        left: 102px;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: row;
+    }
+    .trailer video
+    {
+        max-width: 660px;
+        outline: none;
+    }
+}
+@media (max-width : 551px)
+{
+    .mainsec
+    {
+        position: relative;
+        width: 100%;
+        min-height: 100vh;
+        background: url(../images/bg2.jpg);
+        background-position: right;
+        background-size: cover;
+    }
+    .trailer video
+    {
+        max-width: 550px;
+        outline: none;
+    }
+}
+@media (max-width : 451px)
+{
+    .mainsec
+    {
+        position: relative;
+        width: 100%;
+        /* min-height: 50vh; */
+        background: url(../images/bg2.jpg);
+        background-position: right;
+        background-size: cover;
+    }
+    .mainsec header 
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 15px 15px;
+    }
+    .mainsec header .logo img 
+    {
+        width: 70px;
+        height: 30px;
+    }
+    .mainsec header .toggle img 
+    {
+        width: 30px;
+    }
+    .maincontent 
+    {
+        position: absolute;
+        top: 70px;
+        left: 18px;
+        width: 350px;
+    }
+    .maincontent .disc h2 
+    {
+        color: #fff;
+        font-size: 1.4em;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+    .maincontent .disc p 
+    {
+        color: white;
+        font-size: 12px;
+        line-height: 1.4em;
+        margin-bottom: 15px;
+        font-family: 'Poppins', sans-serif;
+    }
+    .maincontent .disc .play 
+    {
+        position: relative;
+        display: inline-flex;
+        justify-content: flex-start;
+        align-items: center;
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 2px;
+        font-size: 12px;
+        font-weight: 800;
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        cursor: pointer;
+    }
+    .maincontent .disc .play img 
+    {
+        max-width: 20px;
+        margin-right: 8px;
+        cursor: pointer;
+    }
+    .slide 
+    {
+        position: absolute;
+        top: 39%;
+        left: 4%;
+        width: 220px;
+        height: 160px;
+        background: url(../images/joker.png);
+        background-size: cover;
+        cursor: pointer;
+        animation: animate 20s linear infinite;
+    }
+    .sci 
+    {
+        position: absolute;
+        top: 61%;
+        display: flex;
+        left: 64px;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: row;
+    }
+    .trailer video
+    {
+        max-width: 450px;
+        outline: none;
+    }
+}
+@media (max-width : 371px)
+{
+    .maincontent 
+    {
+        position: absolute;
+        top: 70px;
+        left: 20px;
+        width: 250px;
+    }
+    .maincontent .disc .play 
+    {
+        position: relative;
+        display: inline-flex;
+        justify-content: flex-start;
+        align-items: center;
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 2px;
+        font-size: 18px;
+        font-weight: 800;
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        cursor: pointer;
+    }
+    .maincontent .disc .play img 
+    {
+        max-width: 30px;
+        margin-right: 8px;
+        cursor: pointer;
+    }
+    .slide 
+    {
+        position: absolute;
+        top: 46%;
+        left: 6%;
+        width: 267px;
+        height: 195px;
+        background: url(../images/joker.png);
+        background-size: cover;
+        cursor: pointer;
+        animation: animate 20s linear infinite;
+    }
+    .sci 
+    {
+        position: absolute;
+        top: 74%;
+        display: flex;
+        left: 86px;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: row;
+    }
+    .trailer video
+    {
+        max-width: 350px;
+        outline: none;
+    }
+}

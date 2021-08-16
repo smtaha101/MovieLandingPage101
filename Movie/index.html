@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie | Landing page</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+    <section class="mainsec">
+        <header>
+            <a href="" class="logo"><img src="images/logo.png" alt="logo.png"></a>
+            <a href="" class="toggle"><img src="images/toggle.png" alt="menu.png"></a>
+        </header>
+
+        <div class="maincontent">
+            <div class="disc">
+                <h2>put on a <span>happy</span> face</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae in quos corrupti? Odit amet obcaecati illo atque illum. Blanditiis, cum earum, voluptatem nobis consequatur tempore ipsam voluptas ipsum possimus dolores laboriosam iusto dignissimos nam inventore autem placeat. Deleniti, quo ex.</p>
+                <a class="play"><img src="images/play.png" alt="play.png" onclick="toggles();">Watch Trailer</a>
+            </div>
+        </div>
+        <div class="slide"></div>
+        <ul class="sci">
+            <li><a href=""><img src="images/facebook.png"></a></li>
+            <li><a href=""><img src="images/twitter.png"></a></li>
+            <li><a href=""><img src="images/instagram.png"></a></li>
+        </ul>
+    </section>
+    <div class="trailer">
+        <video src="images/JOKER.mp4" controls="controls"></video>
+        <img src="images/close.png" alt="" onclick="toggles();">
+    </div>    
+    <script>
+        function toggles()
+        {
+            var trailer = document.querySelector('.trailer');
+            var video = document.querySelector('video');
+            trailer.classList.toggle('active');
+            video.currentTime = 0;
+            video.pause();
+        }
+    </script>
+</body>
+</html>
